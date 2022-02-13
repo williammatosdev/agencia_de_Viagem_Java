@@ -1,0 +1,33 @@
+package sql;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class SqlConexao {
+	public static void main(String[] args) {
+
+		String url = "jdbc:sqlserver://meuservidor1501.database.windows.net;database=Javacrud;";
+        String usuario = "admAula0701";
+        String senha = "Mariane2010" ;
+        
+		
+
+		try {
+           
+			System.out.println("Sucesso");
+		} 
+		
+		catch (Exception e) {
+			System.out.println("Erro");
+			e.printStackTrace();
+		}
+		
+		}
+
+	public static Connection createConnection() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+		
+	}
+

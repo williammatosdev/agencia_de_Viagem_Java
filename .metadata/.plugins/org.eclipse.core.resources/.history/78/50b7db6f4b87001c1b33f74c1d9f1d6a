@@ -1,0 +1,25 @@
+package sql;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class SqlConexao {
+	
+	private static final String url ="jdbc:sqlserver://localhost:61433;database=javacrud";
+    private static final String user = "adm0107";
+    private static final String password = "Mariane2010";
+    
+    public static Connection createConnection() {
+    	
+    	try {
+    	  Class.forName("com.microsoft.sqlserver.jdbc.Driver");
+    	  System.out.println("sucesso");
+    	  
+    	}catch(ClassNotFoundException e) {
+    	System.out.println("erro" + e.getMessage());
+    	}
+		return null;    	
+    
+       
+    }
+}

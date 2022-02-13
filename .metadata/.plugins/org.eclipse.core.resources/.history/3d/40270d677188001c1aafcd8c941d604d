@@ -1,0 +1,36 @@
+package sql;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class SqlConexao {
+	
+
+		private static final String url = "jdbc:sqlserver://meuservidor1501.database.windows.net;database=Javacrud";
+		private static final String usuario = "admAula0701";
+		private static final String senha = "Mariane2010";
+	
+
+	public static Connection createConnection() {
+
+		
+
+		try {
+
+			String senha = "Mariane2010";
+			String usuario = "admAula0701";
+			
+			Connection conexao = DriverManager.getConnection(url, usuario, senha);
+			System.out.println("Conected to database");
+			return conexao;
+		}
+
+		catch (SQLException e) {
+			System.out.println("Not connected to database");
+			return null;
+		}
+
+	}
+
+}
